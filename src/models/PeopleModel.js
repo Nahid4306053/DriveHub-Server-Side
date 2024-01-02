@@ -23,14 +23,9 @@ const PeopleModel = new Schema({
      }, 
      role:{
       type:String,
-      enum:['user','modaretor','admin'],
+      enum:['user','admin'],
       default:"user"
      }, 
-     usertype:{
-      type:String,
-      enum:['free','pro'],
-      default:"free"
-     },
      additionalInfo :{
         type:Object ,
         default : null           

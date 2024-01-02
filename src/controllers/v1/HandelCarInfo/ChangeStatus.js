@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const createError = require('http-errors');
-const tasks = require('../../../models/TaskModel');
+const cars = require('../../../models/CarModel');
 const ChangeStatus = async (req,res,next)=>{
  try{
-  const taskid = req.params.id;
-  const user = req.CurrentUser._id; 
-  const result = await tasks.findOneAndUpdate({_id:taskid,user:user},{status:req.body.status});
+  const carid = req.params.id;
+  const result = await cars.findOneAndUpdate({_id:carid},{availabilityStatus:req.body.availabilityStatus});
   res.json(result);
+  console.log(result,req.body.availabilityStatus)
 
  }catch(err){
    console.log(err);
