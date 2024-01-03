@@ -4,6 +4,7 @@ const logOut = require('../../routes/auth/logOut');
 // const task = require('../../routes/Task/Tasks');
 const car = require('../../routes/Car/car');
 const Payment = require('../../routes/Payment/Payment');
+const review = require('../../routes/Review/Review');
 const router = express.Router()
 
 router.get("/",(req,res)=>{
@@ -25,6 +26,9 @@ router.use("/car" , car);
 
 //--- /api/v1/Package
 router.use("/payment" , Payment);
+
+
+router.use("/review" , review);
 
 
 
