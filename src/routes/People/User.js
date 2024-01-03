@@ -7,9 +7,9 @@ const getPeople= require("../../controllers/v1/People/getPeoples")
 const ChangeRole= require("../../controllers/v1/People/ChangeRole")
 const User = require("express").Router()
 
-User.post('/',CreatePeople , CreateAccessToken)
-User.patch('/set-addtional-info',VerifyUser , SetAddtionalInfo)
-User.get('/all', VerifyUser , getPeople)
-User.patch('/role/:id',VerifyUser , ChangeRole)
+User.post('/',CreatePeople , CreateAccessToken);
+User.patch('/set-addtional-info',VerifyUser , SetAddtionalInfo);
+User.get('/all', VerifyUser , getPeople);
+User.patch('/role/:id',VerifyUser , ChangeRole);
 
 module.exports = User     
