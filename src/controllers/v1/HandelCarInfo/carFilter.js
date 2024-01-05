@@ -17,7 +17,7 @@ const carFilter = async (req,res,next)=>{
    query.availabilityStatus = req.query.status
   } 
   if(req.query.addtime){ 
-    sortop["createdAt"] =  parseInt(req.query.addtime);
+    sortop["createdAt"] = parseInt(req.query.addtime);
   }  
   if(req.query.brand){
     query.brand =  req.query.brand;
