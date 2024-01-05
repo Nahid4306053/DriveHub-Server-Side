@@ -7,6 +7,7 @@ const Payment = require('../../routes/Payment/Payment');
 const review = require('../../routes/Review/Review');
 const Post = require('../../routes/Post/Post');
 const Comment = require('../../routes/comment/Comment');
+const statistics = require('../../routes/statitics/Statitics');
 const router = express.Router()
 
 router.get("/",(req,res)=>{
@@ -35,6 +36,8 @@ router.use("/review" , review);
 router.use("/post" , Post);
 
 router.use("/comment" , Comment);
+
+router.use("/statitics" , statistics);
 
 
 
