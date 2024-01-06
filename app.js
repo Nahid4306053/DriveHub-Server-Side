@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [process.env.ORIGIN,'https://dodrivehub.netlify.app'],
+    origin: [process.env.ORIGIN,'https://drivehubv1.netlify.app'],
     credentials: true, // Allow credentials (cookies, authorization headers)
   })
 );
